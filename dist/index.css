@@ -1,1 +1,2 @@
+html,body,#container{height:100%;margin:0}.comic{display:grid;justify-content:center;align-content:center;height:100%}.comic__title{text-align:center;font-family:"Allerta Stencil",sans-serif;font-size:large}.header{display:grid;grid-template:1fr/1fr;width:100%;height:60px;background-color:#439cef;align-items:end}.header__title{text-align:center;margin:0;font-family:"Coming Soon",cursive;font-size:xx-large;letter-spacing:2px}
 

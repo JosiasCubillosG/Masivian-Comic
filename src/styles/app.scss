@@ -1,0 +1,117 @@
+$font2: 'Allerta Stencil', sans-serif;
+
+html, body, #container {
+    height: 100%;
+    margin: 0;
+}
+
+.comic {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+
+    &__title{
+        height: max-content;
+        text-align: center;
+        font-family: $font2;
+        font-size: large;
+        h2{
+            margin: 20px;
+        }
+    }
+
+    &__image{
+        display: grid;
+        justify-items: center;;
+        width: 100%;
+        height: max-content;
+        &__img{
+            width: 80%;
+            height: 470px;
+        }
+    }
+
+    &__stars{
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        margin-top: 20px;
+        button{
+            background-color: initial;
+            border: 0;
+            color: gray;
+
+            
+            &:nth-child(1):hover, &:nth-child(1):hover ~ button{
+                color: orange;
+            }
+
+            &:nth-child(2):hover, &:nth-child(2):hover ~ button {
+                color: orange;
+            }
+
+            &:nth-child(3):hover, &:nth-child(3):hover ~ button{
+                color: orange;
+            }
+
+            &:nth-child(4):hover, &:nth-child(4):hover ~ button{
+                color: orange;
+            }
+
+            &:nth-child(5):hover, &:nth-child(5):hover ~ button{
+                color: orange;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .comic{
+        &__image{
+            &__img{
+                height: 450px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .comic{
+        &__image{
+            &__img{
+                width: 50%;
+                height: 450px;
+            }
+        }
+
+        &__stars{
+            button{
+                &:nth-child(1):active,&:nth-child(1):active ~ button{
+                    color: red;
+                }
+
+                &:nth-child(2):active,&:nth-child(2):active ~ button{
+                    color: red;
+                }
+
+                &:nth-child(3):active,&:nth-child(3):active ~ button{
+                    color: red;
+                }
+
+                &:nth-child(4):active,&:nth-child(4):active ~ button{
+                    color: red;
+                }
+                
+                &:nth-child(5):active,&:nth-child(5):active ~ button{
+                    color: red;
+                }
+                
+            }
+        }
+    }
+}
+

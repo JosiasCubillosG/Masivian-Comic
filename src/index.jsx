@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App.jsx'
-import './styles/index.css'
+import './styles/index.scss'
 
 const app = document.getElementById("container")
 
