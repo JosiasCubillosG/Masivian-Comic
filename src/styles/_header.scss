@@ -1,3 +1,4 @@
+$colorBackground: rgba(67,156,239,1);
 $font1: 'Coming Soon', cursive;
 
 .header{
@@ -5,7 +6,7 @@ $font1: 'Coming Soon', cursive;
     grid-template: 1fr/1fr;
     width: 100%;
     height: 60px;
-    background-color: rgba(67,156,239,1);
+    background-color: $colorBackground;
     align-items: end;
     &__title{
         text-align: center;

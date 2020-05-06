@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import Header from './Header.jsx'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faStar} from '@fortawesome/free-solid-svg-icons'
+import Stars from './Stars.jsx'
 
 class App extends React.Component {
 
@@ -11,8 +10,11 @@ class App extends React.Component {
     }
 
     componentDidMount = async() => {
+        this.getComics()
+    }
 
-        Axios.get('https://xkcd.com/614/info.0.json')
+    getComics = () => {
+        Axios.get(`https://xkcd.com/${this.randomNumber()}/info.0.json`)
         .then(res =>{
             if(res.statusText === 'OK') {
                 this.setState({
@@ -30,8 +32,11 @@ class App extends React.Component {
         })
     }
 
-    handleStars = (e) => {
+    randomNumber = (min=1, max=2303 ) => {
+        return Math.floor(Math.random() * (max - min) + min)
     }
+
+
 
 
     render(){
@@ -41,28 +46,12 @@ class App extends React.Component {
                 <Header />
                 <div className="comic">
                     <div className="comic__title">
-                        <h2>{comic.safe_title}</h2>
+                        <h2>{comic.title}</h2>
                     </div>
                     <div className="comic__image">
                         <img className="comic__image__img" src={comic.img} />
                     </div>
-                    <div className="comic__stars">
-                        <button onClick={this.handleStars()}>
-                            <FontAwesomeIcon className="comic__stars__star" icon={faStar} size="3x" />
-                        </button>
-                        <button onClick={this.handleStars()}>
-                            <FontAwesomeIcon className="comic__stars__star" icon={faStar} size="3x" />
-                        </button>
-                        <button onClick={this.handleStars()}>
-                            <FontAwesomeIcon className="comic__stars__star" icon={faStar} size="3x" />
-                        </button>
-                        <button onClick={this.handleStars()}>
-                            <FontAwesomeIcon className="comic__stars__star" icon={faStar} size="3x" />
-                        </button>
-                        <button onClick={this.handleStars()}>
-                            <FontAwesomeIcon className="comic__stars__star" icon={faStar} size="3x" />
-                        </button>
-                    </div>
+                    <Stars />
                 </div>
             </React.Fragment>
         )
