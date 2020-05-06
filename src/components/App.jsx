@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import Header from './Header.jsx'
 import Stars from './Stars.jsx'
+import Cargando from './Cargando.jsx'
+import Error from './Error.jsx'
 
 class App extends React.Component {
 
     state = {
-        comic:[]
+        comic:[],
+        cargando: true,
+        error: false
     }
 
     componentDidMount = async() => {
@@ -18,10 +22,15 @@ class App extends React.Component {
         .then(res =>{
             if(res.statusText === 'OK') {
                 this.setState({
-                    comic: res.data
+                    comic: res.data,
+                    cargando: false
                 })
-                console.log(res.data)
+                
             }else{
+                this.setState({
+                    cargando:false,
+                    error: true
+                })
                 console.log('error else')
                 const error = new Error(res.error)
                 throw error
@@ -29,6 +38,10 @@ class App extends React.Component {
         })
         .catch(err =>{
             console.log('Ha ocurrido un error:', err)
+            this.setState({
+                cargando:false,
+                error: true
+            })
         })
     }
 
@@ -36,11 +49,17 @@ class App extends React.Component {
         return Math.floor(Math.random() * (max - min) + min)
     }
 
-
-
-
     render(){
-        const {comic} = this.state
+        const {comic, cargando, error} = this.state
+
+        if(cargando){
+            return <Cargando />
+        }
+
+        if(error){
+            return <Error />
+        }
+
         return(
             <React.Fragment>
                 <Header />

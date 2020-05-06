@@ -1,0 +1,49 @@
+.error {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    &__title{
+        display: grid;
+        grid-template: 1fr / 2fr; 
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        justify-items: center;
+        height: max-content;
+
+        svg{
+            margin-bottom: 4px;
+        }
+
+        h1{
+            font-family: $font1;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    
+    &__description {
+        p{
+            text-align: center;
+            font-family: $font2;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .error{
+
+        &__title{
+            font-size: xx-large;
+        }
+
+        &__description{
+            font-size: xx-large;
+        }
+
+
+    }
+}
