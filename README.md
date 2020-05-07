@@ -27,7 +27,11 @@ Para poder visualizar el proyecto, debes tener Node instalado, una vez instalado
 
     - Una vez instalada la extensión, procedemos a abrir en el navegador la dirección que nos indica al principio de la terminal al correr el comando npm run server 
 
-    - Estando allí, abrimos la extensión previamente instalados y clickeamos en el logotipo de la extensión
+    - Estando allí, abrimos la extensión previamente instalados
+    
+    - Clickeamos en el logotipo de la extensión que aparece de color negro.
+    
+    - Despues de clickear debe aparecer el logotipo con un color rojo
     
     - Luego damos click a Test CORS 
 
