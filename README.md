@@ -23,7 +23,7 @@ Para poder visualizar el proyecto, debes tener Node instalado, una vez instalado
 
     - En este paso debemos dirigirnos a chrome e instalar la siguien extension: 
 
-        https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?           utm_source=chrome-ntp-icon&fbclid=IwAR3TIxQCWeW_62zR4Cz6x_lgzVegFXNo4fNlR1_rS_fYNg8KfiXAvdovB5Qx
+        https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?utm_source=chrome-ntp-icon&fbclid=IwAR3TIxQCWeW_62zR4Cz6x_lgzVegFXNo4fNlR1_rS_fYNg8KfiXAvdovB5Qx
 
     - Una vez instalada la extensión, procedemos a abrir en el navegador la dirección que nos indica al principio de la terminal al correr el comando npm run server 
 
