@@ -21,7 +21,7 @@ Para poder visualizar el proyecto, debes tener Node instalado, una vez instalado
 
     - Luego corremos el servidor del proyecto con npm run server
 
-    - En este paso debemos dirigirnos a chrome e instalar la siguien extension: 
+    - En este paso debemos dirigirnos a chrome e instalar la extension Allow CORS: Access-Control-Allow-Origin: 
 
         https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?utm_source=chrome-ntp-icon&fbclid=IwAR3TIxQCWeW_62zR4Cz6x_lgzVegFXNo4fNlR1_rS_fYNg8KfiXAvdovB5Qx
 
