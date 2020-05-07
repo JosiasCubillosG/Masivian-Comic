@@ -4,6 +4,8 @@ import Header from './Header.jsx'
 import Stars from './Stars.jsx'
 import Cargando from './Cargando.jsx'
 import Error from './Error.jsx'
+import RankedComics from './RankedComics.jsx'
+
 
 class App extends React.Component {
 
@@ -13,7 +15,7 @@ class App extends React.Component {
         error: false
     }
 
-    componentDidMount = async() => {
+    componentDidMount = () => {
         this.getComics()
     }
 
@@ -45,11 +47,29 @@ class App extends React.Component {
         })
     }
 
+
+
     randomNumber = (min=1, max=2303 ) => {
         return Math.floor(Math.random() * (max - min) + min)
     }
 
+    ratingComic = (oldComics) => {
+        let localS = localStorage.getItem('comic')      
+        if(localS == null){
+            oldComics.push(this.state.comic)
+            localStorage.setItem('comic', JSON.stringify(oldComics))
+        }else{
+            oldComics.push(this.state.comic)
+            for (let index = 0; index < JSON.parse(localS).length; index++) {
+                oldComics.push(JSON.parse(localS)[index])
+            }
+            localStorage.setItem('comic', JSON.stringify(oldComics))
+        }
+        window.location.reload(true)
+    }
+
     render(){
+        var oldComics = []
         const {comic, cargando, error} = this.state
 
         if(cargando){
@@ -70,8 +90,10 @@ class App extends React.Component {
                     <div className="comic__image">
                         <img className="comic__image__img" src={comic.img} />
                     </div>
-                    <Stars />
+                    <Stars comic={this.state.comic} setComic={() => this.ratingComic(oldComics)} />
                 </div>
+                
+
             </React.Fragment>
         )
     }

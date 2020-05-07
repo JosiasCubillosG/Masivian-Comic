@@ -1,0 +1,21 @@
+.rated__comics {
+    &__hr{
+        display: grid;
+        grid-template: 1fr / 50% 50%;
+        width: 100%;
+        &__1{
+
+            width: 85%;
+            margin: 0;
+            border-color: black;
+        }
+
+        &__2{
+            justify-self: end;
+            width: 85%;
+            margin: 0;
+            border-color: black;
+        }
+    }
+
+}

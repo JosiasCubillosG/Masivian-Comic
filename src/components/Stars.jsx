@@ -15,7 +15,7 @@ class Stars extends React.Component {
     }
 
     state = {
-        active:''
+        active:'',
     }
 
     handleStars = (buttons, element) => {
@@ -36,26 +36,36 @@ class Stars extends React.Component {
         
     }
 
+    setRating = () => {
+        this.props.comic.rating = this.state.active
+        this.props.setComic()
+    }
+
     render(){
         var buttons = [this.button1,this.button2, this.button3, this.button4, this.button5]
         return(
-            <div className="comic__stars">
-                <button onClick={() => this.handleStars(buttons,5)} ref={this.button5}>
-                    <FontAwesomeIcon icon={faStar} size="3x" />
-                </button>
-                <button  onClick={() => this.handleStars(buttons,4)} ref={this.button4}>
-                    <FontAwesomeIcon icon={faStar} size="3x" />
-                </button>
-                <button onClick={() => this.handleStars(buttons,3)} ref={this.button3}>
-                    <FontAwesomeIcon icon={faStar} size="3x" />
-                </button>
-                <button onClick={() => this.handleStars(buttons,2)} ref={this.button2}>
-                    <FontAwesomeIcon icon={faStar} size="3x" />
-                </button>
-                <button onClick={() => this.handleStars(buttons,1)} ref={this.button1}>
-                    <FontAwesomeIcon icon={faStar} size="3x" />
-                </button>
-            </div>
+            <React.Fragment>
+                <div className="comic__stars">
+                    <button onClick={() => this.handleStars(buttons,5)} ref={this.button5}>
+                        <FontAwesomeIcon icon={faStar} size="3x" />
+                    </button>
+                    <button  onClick={() => this.handleStars(buttons,4)} ref={this.button4}>
+                        <FontAwesomeIcon icon={faStar} size="3x" />
+                    </button>
+                    <button onClick={() => this.handleStars(buttons,3)} ref={this.button3}>
+                        <FontAwesomeIcon icon={faStar} size="3x" />
+                    </button>
+                    <button onClick={() => this.handleStars(buttons,2)} ref={this.button2}>
+                        <FontAwesomeIcon icon={faStar} size="3x" />
+                    </button>
+                    <button onClick={() => this.handleStars(buttons,1)} ref={this.button1}>
+                        <FontAwesomeIcon icon={faStar} size="3x" />
+                    </button>
+                </div>
+                <div className="comic__button">
+                    <button onClick={this.setRating}>Enviar Calificación</button>
+                </div>
+            </React.Fragment>
         )
     }
 }

@@ -1,5 +1,7 @@
 $colorStar1: gray;
 $colorStar2: orange;
+$colorButton: rgba(67,156,239,1);
+$font1: 'Coming Soon', cursive;
 $font2: 'Allerta Stencil', sans-serif;
 
 
@@ -41,6 +43,7 @@ $font2: 'Allerta Stencil', sans-serif;
         justify-content: center;
         flex-direction: row-reverse;
         margin-top: 20px;
+        width: 100%;
         button{
             background-color: initial;
             border: 0;
@@ -70,6 +73,18 @@ $font2: 'Allerta Stencil', sans-serif;
             &:nth-child(5):hover, &:nth-child(5):hover ~ button{
                 @include changeColor();
             }
+        }
+    }
+
+    &__button{
+        margin-top: 40px;
+        button{
+            height: 50px;
+            border: none;
+            background-color: $colorButton;
+            font-family: $font2;
+            font-size: large;
+            border-radius: 5px;
         }
     }
 }
