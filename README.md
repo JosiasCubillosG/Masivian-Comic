@@ -29,18 +29,10 @@ Para poder visualizar el proyecto, debes tener Node instalado, una vez instalado
 
     - Estando allí, abrimos la extensión previamente instalados y clickeamos en el logotipo de la extensión
     
-    ![masivian1](https://raw.githubusercontent.com/JosiasCubillosG/Masivian-Comic/master/src/public/images/masivian1.png)
-
     - Luego damos click a Test CORS 
-    
-    ![masivian2](https://raw.githubusercontent.com/JosiasCubillosG/Masivian-Comic/master/src/public/images/masivian2.png)
 
     - Se nos abrira una pestaña nueva, damos click en XMLHttpRequest :: GET y aca nos debera aparecer un mensaje en verde
-     
-     ![masivian3](https://raw.githubusercontent.com/JosiasCubillosG/Masivian-Comic/master/src/public/images/masivian3.png)
      
     - Cerramos la pestaña de Test Cors y volvemos a la pestaña donde corre la aplicación y recargamos la pagina
 
     - Aca ya nos deberia aparecer la aplicación funcionando
-    
-    ![masivian4](https://raw.githubusercontent.com/JosiasCubillosG/Masivian-Comic/master/src/public/images/masivian4.png)
