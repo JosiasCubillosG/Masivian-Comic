@@ -1,13 +1,7 @@
-$colorStar1: gray;
-$colorStar2: orange;
 $colorButton: rgba(67,156,239,1);
 $font1: 'Coming Soon', cursive;
 $font2: 'Allerta Stencil', sans-serif;
 
-
-@mixin changeColor {
-    color: $colorStar2 !important;
-}
 
 .comic {
     display:flex;
@@ -38,43 +32,7 @@ $font2: 'Allerta Stencil', sans-serif;
         }
     }
 
-    &__stars{
-        display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        margin-top: 20px;
-        width: 100%;
-        button{
-            background-color: initial;
-            border: 0;
-            color: $colorStar1;
-            transition: 2s all;
-
-            &:hover, &:hover ~ button {
-                transform: rotate(360deg);
-            }
-            
-            &:nth-child(1):hover, &:nth-child(1):hover ~ button{
-                @include changeColor();
-            }
-
-            &:nth-child(2):hover, &:nth-child(2):hover ~ button {
-                @include changeColor();
-            }
-
-            &:nth-child(3):hover, &:nth-child(3):hover ~ button{
-                @include changeColor();
-            }
-
-            &:nth-child(4):hover, &:nth-child(4):hover ~ button{
-                @include changeColor();
-            }
-
-            &:nth-child(5):hover, &:nth-child(5):hover ~ button{
-                @include changeColor();
-            }
-        }
-    }
+    
 
     &__button{
         margin-top: 40px;

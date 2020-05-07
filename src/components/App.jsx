@@ -54,16 +54,16 @@ class App extends React.Component {
     }
 
     ratingComic = (oldComics) => {
-        let localS = localStorage.getItem('comic')      
+        let localS = sessionStorage.getItem('comic')      
         if(localS == null){
             oldComics.push(this.state.comic)
-            localStorage.setItem('comic', JSON.stringify(oldComics))
+            sessionStorage.setItem('comic', JSON.stringify(oldComics))
         }else{
             oldComics.push(this.state.comic)
             for (let index = 0; index < JSON.parse(localS).length; index++) {
                 oldComics.push(JSON.parse(localS)[index])
             }
-            localStorage.setItem('comic', JSON.stringify(oldComics))
+            sessionStorage.setItem('comic', JSON.stringify(oldComics))
         }
         window.location.reload(true)
     }
@@ -92,7 +92,7 @@ class App extends React.Component {
                     </div>
                     <Stars comic={this.state.comic} setComic={() => this.ratingComic(oldComics)} />
                 </div>
-                
+                <RankedComics/>
 
             </React.Fragment>
         )
